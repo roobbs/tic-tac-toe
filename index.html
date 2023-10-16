@@ -16,28 +16,28 @@
     </header>
     <main class="main">
         <div class="gridContainer">
-            <div class="grid"></div>
-            <div class="grid"></div>
-            <div class="grid"></div>
-            <div class="grid"></div>
-            <div class="grid"></div>
-            <div class="grid"></div>
-            <div class="grid"></div>
-            <div class="grid"></div>
-            <div class="grid"></div>
+            <div class="grid one">1</div>
+            <div class="grid two">2</div>
+            <div class="grid three">3</div>
+            <div class="grid four">4</div>
+            <div class="grid five">5</div>
+            <div class="grid six">6</div>
+            <div class="grid seven">7</div>
+            <div class="grid eight">8</div>
+            <div class="grid nine">9</div>
         </div>
         <div class="displayScore">
             <div class="score1 child">
-                <div class="scoreTitle">Player1</div>
-                <div class="scoreNumber">0</div>
+                <div class="scoreTitle player1Name">Player X</div>
+                <div class="scoreNumber player1Score">0</div>
             </div>
             <div class="tie child">
-                <div class="scoreTitle">Ties</div>
+                <div class="scoreTitle tieScore">Ties</div>
                 <div class="scoreNumber">0</div>
             </div>
             <div class="score2 child">
-                <div class="scoreTitle">Player2</div>
-                <div class="scoreNumber">0</div>
+                <div class="scoreTitle player2Name">Player O</div>
+                <div class="scoreNumber player2Score">0</div>
             </div>
         </div>
     </main>
@@ -50,16 +50,18 @@
                 <div class="player1">
                     <div>PICK PLAYER 1'S SIGN</div>
                     <div class="choose">
-                        <div class="x"><img src="./images/x.png" alt="x"></div>
-                        <div class="burrito"><img src="./images/burrito.png" alt="burrito"></div>
+                        <div class="x"><img src="./images/x.png" alt="x" class="imgX imgSelected"></div>
+                        <div class="burrito"><img src="./images/burrito.png" alt="burrito" class="imgBurrito"></div>
                     </div>
+                    <div class="selected1">Player 1 selected: <p class="player1Selection">X</p></div>
                 </div>
                 <div class="player2">
                     <div>PICK PLAYER 2'S SIGN</div>
                     <div class="choose">
-                        <div class="o"><img src="./images/o.png" alt="o"></div>
-                        <div class="taco"><img src="./images/tacos.png" alt=""></div>
+                        <div class="o"><img src="./images/o.png" alt="o" class="imgO imgSelected"></div>
+                        <div class="taco"><img src="./images/tacos.png" alt="taco" class="imgTaco"></div>
                     </div>
+                    <div class="selected2">Player 1 selected: <p class="player2Selection">O</p></div>
                 </div>
             </div>
             <button class="startGame">Start Game</button>
