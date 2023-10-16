@@ -1,8 +1,8 @@
 :root{
-    --fst-color: #f59e0b; 
-    --snd-color: #f97316;
-    --trd-color: #c2410c;
-    --fth-color:#fef3c7;
+    --fst-color: #7f93ae; 
+    --snd-color: #00023f;
+    --trd-color: #000361;
+    --fth-color:#ffffff;
 }
 ::-webkit-scrollbar{
     width: 8px;
@@ -34,13 +34,18 @@ body{
     column-gap: 2rem;
     background-color: var(--fst-color);
 }
+.header .logo{
+    height: 50px;
+    grid-row: span 2;
+}
 .header .displayTurn{
     grid-row: span 2;
     background-color: var(--snd-color);
     border-radius: 10px;
     text-align: center;
     font-size: 2rem;
-    border: 1px solid var(--trd-color);
+    border: 2px solid var(--fth-color);
+    color: var(--fth-color);
 }
 .header .resetGame{
     border: 1px solid var(--trd-color);
@@ -58,7 +63,7 @@ body{
 }
 .main .gridContainer{
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     width: 450px;
     height: 450px;
@@ -70,6 +75,7 @@ body{
 }
 .main .gridContainer .grid:hover{
     background-color: var(--fst-color);
+    border: 1px solid var(--trd-color);
 }
 .main .displayScore{       /*    score        */
     display: flex;
@@ -77,7 +83,7 @@ body{
     gap: 1rem;
 }
 .main .displayScore .child{
-    background-color: var(--snd-color);
+    background-color:var(--snd-color);
     padding: .3rem;
     border-radius: 10px;
     width: 5rem;
@@ -86,7 +92,7 @@ body{
     background-color: var(--fst-color);
 }
 .main .displayScore .child .scoreTitle{
-    color: var(--trd-color);
+    color: white;
     text-align: center;
     font-weight: 900;
 }
@@ -96,20 +102,55 @@ body{
     color: var(--fth-color);
 }
 .dialog { /*            DIALOG                */
-    color: white;
-    font-size: 1rem;
-    background-color: var(--bg-color);
+    color: var(--fth-color);
+    font-size: 1.8rem;
+    background-color: var(--snd-color);
     border-radius: 10px;
 }
 .dialog::backdrop{
-    background-color: rgb(0, 7, 50);
-    opacity: 1;
+    background-color: #7f93ae;
+    opacity: .96;
 }
-.dialog .close{
+.dialog .modalContainer{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap:2rem;
+}
+.modalContainer .imgModal{
+    height: 3rem;
+}
+.modalContainer .choose img{
+    height: 6rem;
+    padding: .5rem;
+    border-radius: 10px;
+    background-color: var(--trd-color);
+}
+.choose {
+    display: flex;
+    justify-content: space-evenly;
+}
+.modalContainer .choose img:hover{
+   background-color: var(--fst-color);
+}
+.modalContainer .titleGame{
+    grid-row: span 2;
+    align-self: center;
+    
+}
+
+.modalContainer .startGame{
     padding: .6rem;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 900;
     border-radius: 8px;
+    background-color: var(--fst-color);
+    border: 3px solid var(--trd-color);
+    color: white;
+} 
+.startGame:hover{
+    background-color: var(--fth-color);
+    color: var(--snd-color);
 }
 .footer{
     font-size: .9rem;

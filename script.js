@@ -1,6 +1,8 @@
 let dialog = document.querySelector(".dialog"); //open dialog
-let btnClose = document.querySelector(".close");
-btnClose.addEventListener("click", () => {
+let btnStartGame = document.querySelector(".startGame");
+btnStartGame.addEventListener("click", () => {
     dialog.close();
 })
-//dialog.showModal();
+let btnResetGame = document.querySelector(".resetGame").addEventListener("click", () => {
+    dialog.showModal()
+});

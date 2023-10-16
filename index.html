@@ -6,11 +6,12 @@
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
+    <link rel="shortcut icon" href="./images/xo-1.png">
 </head>
 <body>
     <header class="header">
-        <div class="logo">logo</div>
-        <div class="displayTurn">turn</div>
+        <img src="./images/xo.png" alt="X O" class="logo">
+        <div class="displayTurn">Player 1 Turn</div>
         <button class="resetGame">Reset</button>
     </header>
     <main class="main">
@@ -43,9 +44,26 @@
     <footer class="footer">By ©Roobbs</footer>
     <!--DIALOG-->
     <dialog class="dialog">
-        <div class="titleGame">X O</div>
-        <div class="playerChoose">PICK PLAYER 1 SIGN</div>
-        <button class="close">Close Dialog</button>
+        <div class="modalContainer">
+            <div class="titleGame"><img src="./images/xo-1.png" alt="X O modal" class="imgModal"></div>
+            <div class="playerChoose">
+                <div class="player1">
+                    <div>PICK PLAYER 1'S SIGN</div>
+                    <div class="choose">
+                        <div class="x"><img src="./images/x.png" alt="x"></div>
+                        <div class="burrito"><img src="./images/burrito.png" alt="burrito"></div>
+                    </div>
+                </div>
+                <div class="player2">
+                    <div>PICK PLAYER 2'S SIGN</div>
+                    <div class="choose">
+                        <div class="o"><img src="./images/o.png" alt="o"></div>
+                        <div class="taco"><img src="./images/tacos.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <button class="startGame">Start Game</button>
+        </div>
     </dialog>
 </body>
 </html>
