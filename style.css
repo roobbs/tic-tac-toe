@@ -1,56 +1,99 @@
 :root{
-    --main-color: rgb(188, 188, 188); 
-    --second-color: rgb(36, 34, 46);
-    --third-color: rgb(15, 0, 103);
-    --bg-color:rgb(85, 85, 85);
+    --fst-color: #f59e0b; 
+    --snd-color: #f97316;
+    --trd-color: #c2410c;
+    --fth-color:#fef3c7;
 }
 ::-webkit-scrollbar{
     width: 8px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: var(--third-color); /* scrollbar color*/
+    background-color: var(--trd-color); /* scrollbar color*/
 }
 ::-webkit-scrollbar-track {
-    background-color: var(--main-color); /* background color*/
-  }
-*{
-    border: 1px solid rgb(255, 255, 255);
+    background-color: var(--fst-color); /* background color*/
 }
 body{
-    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--trd-color);
+    background-color: var(--fth-color);
     margin: 0px;
     padding: 0px;
     height: 99vh;
     position: relative; /*delete if not used*/
     display: grid;
     grid-template-rows: auto 1fr auto;
-    background-color: var(--bg-color);
     font-family: monospace;
 }
 .header{ /*             HEADER                */
     padding: 1rem 3rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 2rem;
+    background-color: var(--fst-color);
+}
+.header .displayTurn{
+    grid-row: span 2;
+    background-color: var(--snd-color);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2rem;
+    border: 1px solid var(--trd-color);
+}
+.header .resetGame{
+    border: 1px solid var(--trd-color);
+    border-radius: 5px;
+    color: var(--trd-color);
+    font-weight: bold;
+    width: 50%;
+    height: 120%;
 }
 .main{ /*               MAIN                  */
-    padding: 2rem 20rem;
+    padding: 2rem 2rem;
     display: grid;
     grid-template-rows: 1fr auto;
     gap: 2rem;
 }
 .main .gridContainer{
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
+    width: 450px;
+    height: 450px;
+    justify-self: center;
 }
 .main .gridContainer .grid{ /*    grids      */ 
     border-radius: 15px;
+    background-color: var(--trd-color);
 }
-.main .displayScore{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+.main .gridContainer .grid:hover{
+    background-color: var(--fst-color);
+}
+.main .displayScore{       /*    score        */
+    display: flex;
+    justify-content: space-around;
     gap: 1rem;
+}
+.main .displayScore .child{
+    background-color: var(--snd-color);
+    padding: .3rem;
+    border-radius: 10px;
+    width: 5rem;
+}
+.main .displayScore .tie{
+    background-color: var(--fst-color);
+}
+.main .displayScore .child .scoreTitle{
+    color: var(--trd-color);
+    text-align: center;
+    font-weight: 900;
+}
+.main .displayScore .child .scoreNumber{
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--fth-color);
 }
 .dialog { /*            DIALOG                */
     color: white;
@@ -69,7 +112,8 @@ body{
     border-radius: 8px;
 }
 .footer{
-    font-size: 1rem;
+    font-size: .9rem;
     text-align: center;
     font-weight: bold;
+    padding-bottom: .5rem;
 }
