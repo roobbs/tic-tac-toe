@@ -1,0 +1,75 @@
+:root{
+    --main-color: rgb(188, 188, 188); 
+    --second-color: rgb(36, 34, 46);
+    --third-color: rgb(15, 0, 103);
+    --bg-color:rgb(85, 85, 85);
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--third-color); /* scrollbar color*/
+}
+::-webkit-scrollbar-track {
+    background-color: var(--main-color); /* background color*/
+  }
+*{
+    border: 1px solid rgb(255, 255, 255);
+}
+body{
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    height: 99vh;
+    position: relative; /*delete if not used*/
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: var(--bg-color);
+    font-family: monospace;
+}
+.header{ /*             HEADER                */
+    padding: 1rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.main{ /*               MAIN                  */
+    padding: 2rem 20rem;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 2rem;
+}
+.main .gridContainer{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.main .gridContainer .grid{ /*    grids      */ 
+    border-radius: 15px;
+}
+.main .displayScore{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+.dialog { /*            DIALOG                */
+    color: white;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+}
+.dialog::backdrop{
+    background-color: rgb(0, 7, 50);
+    opacity: 1;
+}
+.dialog .close{
+    padding: .6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.footer{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
