@@ -76,6 +76,13 @@ body{
 .main .gridContainer .grid{ /*    grids      */ 
     border-radius: 15px;
     background-color: var(--trd-color);
+    display: grid;
+    grid-template-rows: auto auto;
+    padding: 3px;
+    justify-content: center;
+}
+.main .gridContainer .grid img {
+    height: 100px;
 }
 .main .gridContainer .grid:hover{
     background-color: var(--fst-color);
@@ -153,15 +160,20 @@ body{
 .player1Selection, .player2Selection{
     margin: 0px;
     font-size: 2rem;
+    background-color: var(--fth-color);
+    color: var(--snd-color);
+    border-radius: 10px;
+    
 }
-.imgSelected{
+.modalContainer .choose .imgSelected{
     border: 5px solid white;
+    background-color: var(--fst-color);
 }
 .modalContainer .startGame{
-    padding: .6rem;
-    font-size: 1rem;
-    font-weight: 900;
-    border-radius: 8px;
+    padding: .2rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: 15px;
     background-color: var(--fst-color);
     border: 3px solid var(--trd-color);
     color: white;
