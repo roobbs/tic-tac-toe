@@ -125,7 +125,7 @@ let gameControl = (function() {
         if(w1||w2||w3||w4||w5||w5||w6||w7||w8) {
             playerHasWon=true;
             announce.textContent=player.name+" Has WON!";
-            dialog.showModal();
+            setTimeout(()=> dialog.showModal(), 500);
         }
     };
     let checkTie= (array)=>{
@@ -164,4 +164,4 @@ let btnStartGame = document.querySelector(".startGame").addEventListener("click"
     let sqr9 = board.one.addToContainer();
     sqr9(player1,player2,9);
 })
-dialog.showModal();
+setTimeout(()=> dialog.showModal(), 100);
