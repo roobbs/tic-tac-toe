@@ -1,7 +1,5 @@
 let boardContainer = document.querySelector(".gridContainer");
 let showTurn = document.querySelector(".displayTurn");
-let displayPlayer1Score=document.querySelector(".player1Score");
-let displayPlayer2Score=document.querySelector(".player2Score"); 
 let dialog = document.querySelector(".dialog"); //     DIALOG
 let btnResetGame = document.querySelector(".resetGame").addEventListener("click", () => {
     dialog.showModal();
@@ -73,7 +71,6 @@ function createSquare (className) {
             square.addEventListener("click", ()=> {
                 if(square.textContent==="") {
                     if(player1.myTurn===true){
-                        square.textContent=player1.name;
                         let img = new Image();
                         img.src=player1.signSrc();
                         square.appendChild(img);
@@ -81,12 +78,9 @@ function createSquare (className) {
                         player2.myTurn=true;
                         showTurn.textContent=player2.name+"'s Turn";
                         player1.mySquares.push(index);
-                        console.log(player1.name+" has sqrs: "+player1.mySquares);
                         gameControl.checkWin(player1.mySquares,player1);
-                        displayPlayer1Score.textContent=player1.getScore();
                         gameControl.checkTie(player1.mySquares);
                     } else {
-                        square.textContent=player2.name;
                         let img = new Image();
                         img.src=player2.signSrc();
                         square.appendChild(img);
@@ -94,9 +88,7 @@ function createSquare (className) {
                         player1.myTurn=true;
                         showTurn.textContent=player1.name+"'s Turn";
                         player2.mySquares.push(index);
-                        console.log(player2.name+" has sqrs: "+player2.mySquares);
                         gameControl.checkWin(player2.mySquares,player2);
-                        displayPlayer2Score.textContent=player2.getScore();
                     }
                 }
             });
@@ -118,7 +110,6 @@ let createBoard = function() {
     let nine = createSquare("nine");  
     return {one,two,three,four,five,six,seven,eight,nine};
 };
-////////////////////////////////////
 let gameControl = (function() {
     let playerHasWon = false;
     let announce = document.querySelector(".displayWinner");

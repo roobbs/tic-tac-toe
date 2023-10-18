@@ -67,7 +67,8 @@ body{
 .main .gridContainer{
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
     width: 450px;
     height: 450px;
     justify-self: center;
@@ -76,15 +77,12 @@ body{
     border-radius: 15px;
     background-color: var(--trd-color);
     display: grid;
-    gap: 0px;
-    grid-template-rows: auto auto;
     padding: 3px;
     align-content: center;
     justify-content: space-around;
-    padding-top: 0px;
 }
 .main .gridContainer .grid img {
-    height: 100px;
+    max-height: 100px;
 }
 .main .gridContainer .grid:hover{
     background-color: var(--fst-color);
