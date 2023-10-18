@@ -69,7 +69,7 @@ function createSquare (className) {
         boardContainer.appendChild(square);
         let event = function (player1,player2,index) {//this is the closure
             square.addEventListener("click", ()=> {
-                if(square.textContent==="") {
+                if(square.innerHTML==="") {
                     if(player1.myTurn===true){
                         let img = new Image();
                         img.src=player1.signSrc();
