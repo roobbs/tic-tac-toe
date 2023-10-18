@@ -21,7 +21,6 @@ body{
     margin: 0px;
     padding: 0px;
     height: 99vh;
-    position: relative; /*delete if not used*/
     display: grid;
     grid-template-rows: auto 1fr auto;
     font-family: monospace;
@@ -77,9 +76,12 @@ body{
     border-radius: 15px;
     background-color: var(--trd-color);
     display: grid;
+    gap: 0px;
     grid-template-rows: auto auto;
     padding: 3px;
-    justify-content: center;
+    align-content: center;
+    justify-content: space-around;
+    padding-top: 0px;
 }
 .main .gridContainer .grid img {
     height: 100px;
@@ -88,29 +90,27 @@ body{
     background-color: var(--fst-color);
     border: 1px solid var(--trd-color);
 }
-.main .displayScore{       /*    score        */
+.main .displayScore{  
     display: flex;
     justify-content: space-around;
     gap: 1rem;
 }
-.main .displayScore .child{
-    background-color:var(--snd-color);
-    padding: .3rem;
-    border-radius: 10px;
-    width: 5rem;
+.displayScore .player1Name,
+.displayScore .player2Name{
+    border: 3px solid var(--fst-color);
+    border-radius: 20px;
+    font-size: 1.7rem;
+    padding: .2rem 2rem;
 }
-.main .displayScore .tie{
-    background-color: var(--fst-color);
-}
-.main .displayScore .child .scoreTitle{
-    color: white;
-    text-align: center;
-    font-weight: 900;
-}
-.main .displayScore .child .scoreNumber{
-    font-size: 1.5rem;
-    text-align: center;
+.displayScore .vs{
     color: var(--fth-color);
+    background-color: var(--trd-color);
+    border-radius: 10px;
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 1.5rem;
 }
 .dialog { /*            DIALOG                */
     color: var(--fth-color);
@@ -123,8 +123,8 @@ body{
     opacity: .96;
 }
 .dialog .modalContainer{
+    padding: 0rem 2rem;
     display: grid;
-    grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
     gap:2rem;
 }
@@ -144,10 +144,14 @@ body{
 .modalContainer .choose img:hover{
    background-color: var(--fst-color);
 }
-.modalContainer .titleGame{
-    grid-row: span 2;
-    align-self: center;
-    
+.modalContainer .displayWinner{
+    display: flex;
+    justify-content: center;
+    background-color: var(--fst-color);
+    border-radius: 15px;
+    font-size: 2.3rem;
+    font-weight: 900;
+    padding: 0rem 1rem;
 }
 .playerChoose{
     display: grid;
@@ -159,7 +163,7 @@ body{
 }
 .player1Selection, .player2Selection{
     margin: 0px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     background-color: var(--fth-color);
     color: var(--snd-color);
     border-radius: 10px;
